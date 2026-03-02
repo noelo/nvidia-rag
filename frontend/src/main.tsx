@@ -32,7 +32,7 @@ const queryClient = new QueryClient();
  * Application entry point that renders the React application.
  * 
  * Sets up the React root, React Query provider, and React Strict Mode
- * for the NVIDIA RAG frontend application.
+ * for the RAG Assistant frontend application.
  */
 ReactDOM.createRoot(document.getElementById("root")!).render(
   // Temporary: Disabled StrictMode to fix double popover in development

@@ -22,7 +22,7 @@ import { useTheme } from "../../hooks/useTheme";
  * Main layout component that provides the application structure.
  * 
  * Renders the header and wraps child components in a consistent layout
- * with NVIDIA dark theme styling and responsive design.
+ * with Red Hat branding and responsive design.
  * 
  * @param props - Component props with children elements
  * @returns Layout wrapper with header and main content area

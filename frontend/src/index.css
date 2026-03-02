@@ -3,10 +3,54 @@
 @import "tailwindcss/utilities.css";
 @import "@kui/react/base.css";
 
+/* Red Hat Brand Variables */
+:root {
+  /* Red Hat Brand Colors */
+  --rh-red: #ee0000;
+  --rh-red-10: #fce3e3;
+  --rh-red-20: #fbc5c5;
+  --rh-red-60: #a60000;
+  --rh-red-70: #5f0000;
+  --rh-gray-10: #f2f2f2;
+  --rh-gray-20: #e0e0e0;
+  --rh-gray-80: #292929;
+  --rh-gray-90: #1f1f1f;
+  --rh-gray-95: #151515;
+  
+  /* Red Hat Accent Colors */
+  --rh-blue: #0066cc;
+  --rh-blue-10: #e0f0ff;
+  --rh-green: #3f9c35;
+  --rh-green-10: #e9f7df;
+  --rh-orange: #ec7a08;
+  --rh-orange-10: #ffe8cc;
+  --rh-purple: #8559da;
+  --rh-purple-10: #ece6ff;
+  
+  /* Typography */
+  --rh-font-display: 'Red Hat Display', sans-serif;
+  --rh-font-text: 'Red Hat Text', sans-serif;
+  --rh-font-mono: 'Red Hat Mono', monospace;
+  
+  /* Override KUI Brand Color */
+  --color-brand: var(--rh-red);
+}
+
 /* Apply theme background to html and body */
 html, body {
   background-color: var(--background-color-surface-base);
   color: var(--text-color-default);
+  font-family: var(--rh-font-text);
+}
+
+/* Override headings with Red Hat Display */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--rh-font-display);
+}
+
+/* Code elements use Red Hat Mono */
+code, pre, kbd, samp {
+  font-family: var(--rh-font-mono);
 }
 
 /* Bounce animation for StreamingIndicator dots */
@@ -18,6 +62,16 @@ html, body {
   40% {
     transform: scale(1);
     opacity: 1;
+  }
+}
+
+/* Spin animation for loading spinner */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
 
