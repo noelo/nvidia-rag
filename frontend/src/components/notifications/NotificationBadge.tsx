@@ -43,7 +43,7 @@ export const NotificationBadge = ({ count }: NotificationBadgeProps) => (
           right: '-24px'
         }}
       >
-        <Badge kind="solid" color="green">
+        <Badge kind="solid" color="red">
           {count}
         </Badge>
       </div>

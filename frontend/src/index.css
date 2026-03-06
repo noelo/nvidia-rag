@@ -32,8 +32,23 @@
   --rh-font-text: 'Red Hat Text', sans-serif;
   --rh-font-mono: 'Red Hat Mono', monospace;
   
-  /* Override KUI Brand Color */
+  /* Override KUI Brand Colors */
   --color-brand: var(--rh-red);
+  --color-brand-primary: var(--rh-red);
+  --color-brand-alpha-5: rgba(238, 0, 0, 0.05);
+  --color-brand-alpha-15: rgba(238, 0, 0, 0.15);
+  --color-brand-alpha-25: rgba(238, 0, 0, 0.25);
+  
+  /* Ensure active navigation items use Red Hat red */
+  [data-active="true"] {
+    --text-color-accent: var(--rh-red);
+    --background-color-accent-subtle: var(--rh-red-10);
+  }
+  
+  /* Ensure interactive elements use Red Hat brand colors */
+  --background-color-interactive: var(--rh-red);
+  --text-color-interactive: var(--rh-red);
+  --border-color-interactive: var(--rh-red);
 }
 
 /* Apply theme background to html and body */
