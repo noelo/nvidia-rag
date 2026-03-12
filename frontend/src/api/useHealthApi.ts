@@ -27,7 +27,10 @@ export function useHealthStatus() {
     queryFn: async () => {
       const res = await fetch("/api/health?check_dependencies=true");
       if (!res.ok) throw new Error("Failed to fetch health status");
-      return res.json();
+      const data = await res.json();
+      const { nim, ...rest } = data;
+      console.log(nim);
+      return rest;
     },
     staleTime: 30 * 1000, // Cache for 30 seconds
     retry: 1, // Only retry once to avoid delays
