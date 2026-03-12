@@ -21,7 +21,7 @@ export default defineConfig({
   server: {
     port: 3000,
     host: true, // Allow external connections
-    allowedHosts: ["admin-opencode-devspace-code-redirect-3.apps.snoai.bohereen.com", "admin-opencode-devspace-code-redirect-1.apps.snoai.bohereen.com"],
+    allowedHosts: ["admin-opencode-devspace-code-redirect-3.apps.snoai.bohereen.com", "admin-opencode-devspace-code-redirect-1.apps.snoai.bohereen.com", "admin-opencode-devspace-code-redirect-2.apps.snoai.bohereen.com"],
     proxy: {
       '/api/generate': {
         target: CHAT_TARGET,
@@ -68,7 +68,7 @@ export default defineConfig({
   preview: {
     port: 3000,
     host: true, // Allow external connections for preview mode too
-    allowedHosts: ["admin-opencode-devspace-code-redirect-3.apps.snoai.bohereen.com", "admin-opencode-devspace-code-redirect-1.apps.snoai.bohereen.com"],
+    allowedHosts: ["admin-opencode-devspace-code-redirect-3.apps.snoai.bohereen.com", "admin-opencode-devspace-code-redirect-1.apps.snoai.bohereen.com", "admin-opencode-devspace-code-redirect-2.apps.snoai.bohereen.com"],
     proxy: {
       '/api/generate': {
         target: CHAT_TARGET,
