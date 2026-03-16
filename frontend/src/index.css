@@ -16,7 +16,7 @@
   --rh-gray-80: #292929;
   --rh-gray-90: #1f1f1f;
   --rh-gray-95: #151515;
-  
+
   /* Red Hat Accent Colors */
   --rh-blue: #0066cc;
   --rh-blue-10: #e0f0ff;
@@ -26,6 +26,15 @@
   --rh-orange-10: #ffe8cc;
   --rh-purple: #8559da;
   --rh-purple-10: #ece6ff;
+
+  /* Yellow for toggles */
+  --rh-yellow: #f9c500;
+  --rh-yellow-10: #fef3dd;
+
+  /* Override KUI Switch toggle color to yellow */
+  --background-color-interaction-primary-base: var(--color-yellow-200);
+  --background-color-interaction-primary-hover: var(--color-yellow-300);
+  --background-color-interaction-primary-selected: var(--color-yellow-400);
   
   /* Typography */
   --rh-font-display: 'Red Hat Display', sans-serif;
@@ -104,4 +113,9 @@ code, pre, kbd, samp {
   overflow-x: auto;
   max-width: 100%;
   word-wrap: normal;
+}
+
+/* Force toggle switch track to yellow */
+.nv-switch-track::after {
+  background-color: var(--color-yellow-200) !important;
 }
