@@ -119,3 +119,37 @@ code, pre, kbd, samp {
 .nv-switch-track::after {
   background-color: var(--color-yellow-200) !important;
 }
+
+/* Override vertical nav link active state to yellow */
+.nv-vertical-nav-gradient-background {
+  background: linear-gradient(to left, transparent 0.0%, var(--color-translucent-white-000) var(--vertical-nav-gradient-percentage), var(--color-yellow-300) 100.0%) !important;
+}
+
+.nv-vertical-nav-link.nv-vertical-nav-link--active:not(.nv-vertical-nav-link--disabled) {
+  --tw-shadow: inset 2px 0 0 0 var(--tw-shadow-color, var(--color-yellow-300)) !important;
+  box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow) !important;
+  background: linear-gradient(to left, transparent 0.0%, var(--color-translucent-white-000) var(--vertical-nav-gradient-percentage), var(--color-yellow-300) 100.0%) !important;
+}
+
+/* Override spinner to use yellow instead of green */
+.nv-spinner {
+  filter: drop-shadow(0 0 calc(var(--spinner-shadow-size) * 2) var(--color-yellow-300)) !important;
+}
+
+.nv-spinner-arrow {
+  fill: var(--color-yellow-300) !important;
+}
+
+/* Red Hat logo spin animation for loading state */
+.rh-spinner {
+  animation: rh-spin 1s linear infinite;
+}
+
+@keyframes rh-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

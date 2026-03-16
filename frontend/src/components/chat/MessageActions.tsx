@@ -16,7 +16,8 @@
 import { useSendMessage } from "../../api/useSendMessage";
 import { useStreamingStore } from "../../store/useStreamingStore";
 import { useMessageSubmit } from "../../hooks/useMessageSubmit";
-import { Button, Block, Flex, Spinner } from "@kui/react";
+import { Button, Block, Flex } from "@kui/react";
+import RedHatLogo from "../icons/RedHatLogo";
 
 const StopIcon = () => (
   <div style={{ width: '8px', height: '8px', backgroundColor: 'currentColor', borderRadius: '2px' }} />
@@ -26,6 +27,12 @@ const SendIcon = () => (
   <svg style={{ width: '14px', height: '14px' }} fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
     <path strokeLinecap="round" strokeLinejoin="round" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
   </svg>
+);
+
+const RedHatLoadingLogo = () => (
+  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+    <RedHatLogo height="16px" className="rh-spinner" />
+  </div>
 );
 
 const StopButton = () => {
@@ -53,7 +60,7 @@ const SendButton = () => {
     if (isHealthLoading) {
       return (
         <Flex align="center" gap="density-xs">
-          <Spinner size="small" aria-label="Loading system configuration" />
+          <RedHatLoadingLogo />
         </Flex>
       );
     }
